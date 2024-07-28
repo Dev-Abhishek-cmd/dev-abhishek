@@ -261,7 +261,7 @@ export default function Home() {
               </div>
               <div>
                 <label htmlFor="message" className="block text-lg font-semibold mb-2">Message</label>
-                <textarea id="message" name="message" rows="4" className="w-full p-3 border border-gray-300 rounded-lg" required></textarea>
+                <textarea id="message" name="message" className="w-full p-3 border border-gray-300 rounded-lg" required/>
               </div>
               <button type="submit" className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">Send Message</button>
             </div>
