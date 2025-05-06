@@ -1,9 +1,8 @@
 import React from "react";
-import ProjectLanguages from "../../components/projectLanguages/ProjectLanguages";
-import "./GithubRepoCard.css";
+import ProjectLanguages from "@/src/components/projectLanguages/ProjectLanguages";
 import { Fade } from "react-reveal";
 
-export default function GithubRepoCard({ repo, theme }) {
+ const GithubRepoCard=({ repo, theme }) =>{
   function openRepoinNewTab(url) {
     var win = window.open(url, "_blank");
     win.focus();
@@ -77,3 +76,5 @@ export default function GithubRepoCard({ repo, theme }) {
     </div>
   );
 }
+
+export default GithubRepoCard

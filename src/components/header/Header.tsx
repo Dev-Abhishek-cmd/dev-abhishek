@@ -1,8 +1,8 @@
 import React from "react";
-import { Fade } from "react-reveal";
-import { greeting, settings } from "../../portfolio";
-import NavLink from "../router";
 import Link from 'next/link'
+import { Fade } from "react-reveal";
+import NavLink from "../router";
+import { greeting, settings } from "../../portfolio";
 
 const onMouseEnter = (event, color) => {
   const el = event.target;
@@ -20,12 +20,14 @@ const Header = (props) => {
   return (
     <Fade top duration={1000} distance="20px">
       <div className="header">
-          <NavLink to={link} tag={Link} className="logo">
+          <NavLink to={link} tag={Link} >
+            <div className="logo">
             <span style={{ color: theme.text }}> &lt;</span>
             <span className="logo-name" style={{ color: theme.text }}>
               {greeting.logo_name}
             </span>
             <span style={{ color: theme.text }}>/&gt;</span>
+            </div>
           </NavLink>
           <input className="menu-btn" type="checkbox" id="menu-btn" />
           <label className="menu-icon" htmlFor="menu-btn">
@@ -34,7 +36,7 @@ const Header = (props) => {
           <ul className="menu" style={{ backgroundColor: theme.body }}>
             <li>
               <NavLink
-                to="/home"
+                to="/"
                 tag={Link}
                 activeStyle={{ fontWeight: "bold" }}
                 style={{ color: theme.text }}

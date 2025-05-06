@@ -1,8 +1,7 @@
 import React from "react";
-import "./PublicationCard.css";
 import { Fade } from "react-reveal";
 
-export default function PublicationCard({ pub, theme }) {
+ const PublicationCard=({ pub, theme }) =>{
   function openPubinNewTab(url) {
     var win = window.open(url, "_blank");
     win.focus();
@@ -26,8 +25,7 @@ export default function PublicationCard({ pub, theme }) {
           <div className="publication-details">
             <p
               className="publication-creation-date subTitle"
-              style={{ color: theme.secondaryText }}
-            >
+              style={{ color: theme.secondaryText }}>
               Published on {pub.createdAt.split("T")[0]}
             </p>
           </div>
@@ -62,3 +60,4 @@ export default function PublicationCard({ pub, theme }) {
     </div>
   );
 }
+export default PublicationCard

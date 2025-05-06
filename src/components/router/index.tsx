@@ -15,9 +15,7 @@ type TNavLink = {
 const NavLink = ({ children, to, tag, className, activeStyle, style, ...rest }: TNavLink) => {
     return (
         <Link href={to} passHref legacyBehavior {...rest} >
-            <div className={className} style={{ ...activeStyle, ...style }}>
                 {children}
-            </div>
         </Link>
     )
 }

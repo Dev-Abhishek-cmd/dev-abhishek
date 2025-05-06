@@ -1,6 +1,7 @@
 import React from "react";
-import { socialMediaLinks } from "../../portfolio";
 import styled from "styled-components";
+import { socialMediaLinks } from "../../portfolio";
+import Link from "next/link";
 
 const IconWrapper = styled.span`
   i {
@@ -17,7 +18,7 @@ const socialMedia = (props) => {
     <div className="social-media-div">
       {socialMediaLinks.map((media, i) => {
         return (
-          <a
+          <Link
             key={i}
             href={media.link}
             className={`icon-button`}
@@ -27,8 +28,7 @@ const socialMedia = (props) => {
             <IconWrapper {...media} {...props}>
               <i className={`fab ${media.fontAwesomeIcon}`}></i>
             </IconWrapper>
-            {/* <span></span> */}
-          </a>
+          </Link>
         );
       })}
     </div>
