@@ -56,3 +56,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.raw_logo {
+  height: 305;
+  width: 440;
+}

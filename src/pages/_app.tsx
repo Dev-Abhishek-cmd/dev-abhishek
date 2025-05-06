@@ -8,6 +8,7 @@ import "./experience.css";
 import "./projects.css";
 import "./opensource.css";
 import "./contact.css";
+import "./splash.css";
 
 const HomeLayout = (props: any) => {
     const { Component, pageProps } = props
