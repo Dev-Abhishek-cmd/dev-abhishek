@@ -45,9 +45,9 @@ const DegreeCard = (props) => {
             </div>
           </div>
           <div className="body-content">
-            {degree.descriptions.map((sentence) => {
+            {degree.descriptions.map((sentence, index) => {
               return (
-                <p className="content-list" style={{ color: theme.text }}>
+                <p key={"degree" + index} className="content-list" style={{ color: theme.text }}>
                   {sentence}
                 </p>
               );
