@@ -1,13 +1,13 @@
 import React from "react";
 
-export default function AchivementCard({ cardInfo }) {
+export default function AchivementCard({ cardInfo, key }) {
   function openUrlInNewTab(url) {
     var win = window.open(url, "_blank");
     win.focus();
   }
 
   return (
-    <div className="certificate-card">
+    <div className="certificate-card" key={"certificate" + key}>
       <div className="certificate-image-div">
         <img src={cardInfo.image} alt="PWA" className="card-image"></img>
       </div>
@@ -17,7 +17,7 @@ export default function AchivementCard({ cardInfo }) {
       </div>
       <div className="certificate-card-footer">
         {cardInfo.footer.map((v, i) => {
-          return <p onClick={() => openUrlInNewTab(v.url)}>{v.name}</p>;
+          return <p key={"cardInfo" + i} onClick={() => openUrlInNewTab(v.url)}>{v.name}</p>;
         })}
       </div>
     </div>

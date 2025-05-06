@@ -1,9 +1,9 @@
 import React from "react";
 import "./BlogCard.css";
 
-export default function BlogCard({ blog }) {
+export default function BlogCard({ blog }, key) {
   return (
-    <div>
+    <div key={"Blog"+key}>
       <div class="container">
         <div class="square">
           <img src={blog.image} alt="blog" className="blog-card-image mask" />
