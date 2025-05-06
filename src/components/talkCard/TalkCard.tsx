@@ -1,9 +1,9 @@
 import React from "react";
 import "./TalkCard.css";
 
-export default function TalkCard({ talkDetails }) {
+export default function TalkCard({ talkDetails, key }) {
   return (
-    <div>
+    <div key={key}>
       <div class="container">
         <div class="rectangle">
           <div class="diagonal-fill"></div>

@@ -10,6 +10,7 @@ const ExperienceCard = (props: any) => {
     <div
       className="experience-list-item"
       style={{ marginTop: index === 0 ? 30 : 50 }}
+      key={"experience-card" + index}
     >
       <Fade left duration={2000} distance="40px">
         <div className="experience-card-logo-div">
@@ -46,8 +47,8 @@ const ExperienceCard = (props: any) => {
         <div style={{ display: "flex", flexDirection: "row" }}>
           <div
             className="arrow-left"
-            style={{ borderRight: `10px solid ${theme.body}` }}
-          ></div>
+            style={{ borderRight: `10px solid ${theme.body}` }}>
+          </div>
           <div
             className="experience-card"
             style={{ background: `${theme.body}` }}
@@ -57,24 +58,20 @@ const ExperienceCard = (props: any) => {
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-between",
-              }}
-            >
+              }}>
               <div>
                 <h3
                   className="experience-card-title"
-                  style={{ color: theme.text }}
-                >
+                  style={{ color: theme.text }}>
                   {experience["title"]}
                 </h3>
                 <p
                   className="experience-card-company"
-                  style={{ color: theme.text }}
-                >
+                  style={{ color: theme.text }}>
                   <a
                     href={experience["company_url"]}
                     target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                    rel="noopener noreferrer">
                     {experience["company"]}
                   </a>
                 </p>
@@ -83,14 +80,12 @@ const ExperienceCard = (props: any) => {
                 <div className="experience-card-heading-right">
                   <p
                     className="experience-card-duration"
-                    style={{ color: theme.secondaryText }}
-                  >
+                    style={{ color: theme.secondaryText }}>
                     {experience["duration"]}
                   </p>
                   <p
                     className="experience-card-location"
-                    style={{ color: theme.secondaryText }}
-                  >
+                    style={{ color: theme.secondaryText }}>
                     {experience["location"]}
                   </p>
                 </div>
@@ -101,8 +96,7 @@ const ExperienceCard = (props: any) => {
                 display: "flex",
                 justifyContent: "flex-start",
                 marginTop: 20,
-              }}
-            >
+              }}>
               <div className="repo-description" />
               {experience["description"]}
             </div>

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Fade } from "react-reveal";
 
 const CertificationCard = (props) => {
@@ -6,7 +6,7 @@ const CertificationCard = (props) => {
   const theme = props.theme;
   return (
     <Fade bottom duration={2000} distance="20px">
-      <div className="cert-card">
+      <div className="cert-card" key={props.key}>
         <div className="content">
           <a
             href={certificate.certificate_link}

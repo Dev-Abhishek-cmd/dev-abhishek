@@ -15,8 +15,9 @@ const Certifications = (props) => {
         </Fade>
       </div>
       <div className="certs-body-div">
-        {certifications.certifications.map((cert) => {
+        {certifications.certifications.map((cert, index) => {
           return <CertificationCard
+            key={"certificate" + index}
             certificate={cert}
             theme={theme} />;
         })}
