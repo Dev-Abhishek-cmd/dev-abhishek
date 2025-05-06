@@ -4,7 +4,6 @@ type TNavLink = {
     children: any;
     to: any;
     tag: any;
-    className?: string;
     activeStyle?: any;
     style?: any;
     onMouseEnter?: any;
@@ -12,10 +11,10 @@ type TNavLink = {
 }
 
 
-const NavLink = ({ children, to, tag, className, activeStyle, style, ...rest }: TNavLink) => {
+const NavLink = ({ children, to, tag, activeStyle, style, ...rest }: TNavLink) => {
     return (
         <Link href={to} passHref legacyBehavior {...rest} >
-                {children}
+            {children}
         </Link>
     )
 }

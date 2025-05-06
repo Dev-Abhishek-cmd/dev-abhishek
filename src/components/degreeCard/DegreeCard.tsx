@@ -15,7 +15,7 @@ const DegreeCard = (props) => {
                 maxHeight: "100%",
                 transform: "scale(0.9)",
               }}
-              src={require('../../../public/images/iiitk_logo.png')}
+              src={`/images/${degree.logo_path}`}
               alt={degree.alt_name}
             />
           </div>
