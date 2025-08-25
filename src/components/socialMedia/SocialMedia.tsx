@@ -1,9 +1,13 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { DefaultTheme } from "styled-components";
 import { socialMediaLinks } from "../../portfolio";
 import Link from "next/link";
 
-const IconWrapper = styled.span`
+interface IconWrapperProps {
+  backgroundColor: string;
+  theme: DefaultTheme;
+}
+const IconWrapper = styled.span<IconWrapperProps>`
   i {
     background-color: ${(props) => props.backgroundColor};
   }
@@ -13,7 +17,10 @@ const IconWrapper = styled.span`
   }
 `;
 
-const socialMedia = (props) => {
+interface SocialMediaProps {
+  theme: DefaultTheme;
+}
+const socialMedia = (props: SocialMediaProps) => {
   return (
     <div className="social-media-div">
       {socialMediaLinks.map((media, i) => {
@@ -25,7 +32,7 @@ const socialMedia = (props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <IconWrapper {...media} {...props}>
+            <IconWrapper backgroundColor={media.backgroundColor} theme={props.theme}>
               <i className={`fab ${media.fontAwesomeIcon}`}></i>
             </IconWrapper>
           </Link>

@@ -1,9 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import DegreeCard from "../../components/degreeCard/DegreeCard";
 import { degrees } from "../../portfolio";
 import { Fade } from "react-reveal";
 
-const Educations = (props) => {
+type TEducations = {
+  theme: any;
+}
+const Educations = (props:TEducations) => {
 
   const theme = props.theme;
   return (
@@ -16,10 +19,12 @@ const Educations = (props) => {
         </Fade>
       </div>
       <div className="educations-body-div">
-        {degrees.degrees.map((degree) => {
+        {degrees.degrees.map((degree, idx) => {
           return <DegreeCard
             degree={degree}
-            theme={theme} />;
+            theme={theme}
+            key={degree.title || idx}
+          />;
         })}
       </div>
     </div>

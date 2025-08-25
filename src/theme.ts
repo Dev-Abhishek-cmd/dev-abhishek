@@ -1,5 +1,6 @@
 // theme.js
-export const blueTheme = {
+import { Theme } from "./theme.types";
+export const blueTheme: Theme = {
   body: "#EDF9FE",
   text: "#001C55",
   expTxtColor: "#000a12",
@@ -13,7 +14,7 @@ export const blueTheme = {
   splashBg: "#001C55",
 };
 
-export const brownTheme = {
+export const brownTheme: Theme = {
   body: "#FFFEFD",
   text: "#5D2A42",
   expTxtColor: "#000a12",
@@ -27,7 +28,7 @@ export const brownTheme = {
   splashBg: "#5D2A42",
 };
 
-export const purpleTheme = {
+export const purpleTheme: Theme = {
   body: "#F8EFF4",
   text: "#231942",
   expTxtColor: "#000a12",
@@ -41,7 +42,7 @@ export const purpleTheme = {
   splashBg: "#231942",
 };
 
-export const greenTheme = {
+export const greenTheme: Theme = {
   body: "#FFFFEB",
   text: "#003F2F",
   expTxtColor: "#000a12",
@@ -55,7 +56,7 @@ export const greenTheme = {
   splashBg: "#003F2F",
 };
 
-export const redTheme = {
+export const redTheme: Theme = {
   body: "#FFF8E6",
   text: "#6a040f",
   expTxtColor: "#000a12",
@@ -69,7 +70,7 @@ export const redTheme = {
   splashBg: "#6a040f",
 };
 
-export const blackTheme = {
+export const blackTheme: Theme = {
   body: "#E5E5E5",
   text: "#14213d",
   expTxtColor: "#000a12",
@@ -83,7 +84,7 @@ export const blackTheme = {
   splashBg: "#14213d",
 };
 
-export const pinkTheme = {
+export const pinkTheme: Theme = {
   body: "#FEE9F2",
   text: "#620E34",
   expTxtColor: "#000a12",
@@ -97,7 +98,7 @@ export const pinkTheme = {
   splashBg: "#620E34",
 };
 
-export const violetTheme = {
+export const violetTheme: Theme = {
   body: "#F4EEFC",
   text: "#430A58",
   expTxtColor: "#000a12",
@@ -111,7 +112,7 @@ export const violetTheme = {
   splashBg: "#430A58",
 };
 
-export const tealTheme = {
+export const tealTheme: Theme = {
   body: "#E6FAF5",
   text: "#084c61",
   expTxtColor: "#000a12",
@@ -125,7 +126,7 @@ export const tealTheme = {
   splashBg: "#084c61",
 };
 
-export const orangeTheme = {
+export const orangeTheme: Theme = {
   body: "#FFF0EA",
   text: "#99401F",
   expTxtColor: "#000a12",
@@ -139,7 +140,7 @@ export const orangeTheme = {
   splashBg: "#99401F",
 };
 
-export const yellowTheme = {
+export const yellowTheme: Theme = {
   body: "#FFD95D",
   text: "#5f4339",
   expTxtColor: "#000a12",
@@ -153,7 +154,7 @@ export const yellowTheme = {
   splashBg: "#5f4339",
 };
 
-export const materialDarkTheme = {
+export const materialDarkTheme: Theme = {
   body: "#263238",
   text: "#aeaeae",
   expTxtColor: "#000a12",
@@ -167,7 +168,7 @@ export const materialDarkTheme = {
   splashBg: "#4f5b62",
 };
 
-export const materialLightTheme = {
+export const materialLightTheme: Theme = {
   body: "#ffffff",
   text: "#4c2b91",
   expTxtColor: "#000000",
@@ -181,7 +182,7 @@ export const materialLightTheme = {
   splashBg: "#7d56c2",
 };
 
-export const materialTealTheme = {
+export const materialTealTheme: Theme = {
   body: "#ffffff",
   text: "#05505E",
   expTxtColor: "#000000",
