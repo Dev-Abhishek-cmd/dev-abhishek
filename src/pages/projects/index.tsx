@@ -51,7 +51,7 @@ const Projects = (props) => {
       </div>
       <div className="repo-cards-div-main">
         {ProjectsData.data.map((repo) => {
-          return <GithubRepoCard repo={repo} theme={theme} />;
+          return <GithubRepoCard key={repo.id || repo.name} repo={repo} theme={theme} />;
         })}
       </div>
       <Button
@@ -88,7 +88,7 @@ const Projects = (props) => {
 
       <div className="repo-cards-div-main">
         {publications.data.map((pub) => {
-          return <PublicationCard pub={pub} theme={theme} />;
+          return <PublicationCard key={pub.id || pub.name} pub={pub} theme={theme} />;
         })}
       </div>
 

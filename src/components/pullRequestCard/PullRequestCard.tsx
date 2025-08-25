@@ -2,7 +2,11 @@ import React from "react";
 import { Fade } from "react-reveal";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
-const PullRequestCard = (props) => {
+type TPullRequestCard = {
+  pullRequest: any
+
+}
+const PullRequestCard = (props: TPullRequestCard) => {
   const pullRequest = props.pullRequest;
   var iconPR;
   var bgColor;

@@ -3,7 +3,11 @@ import { Fade } from "react-reveal";
 import PullRequestCard from "@/src/components/pullRequestCard/PullRequestCard";
 import pullRequestsData from "@/src/shared/opensource/pull_requests.json";
 
-const PullRequests = (props) => {
+type TPullRequests = {
+  theme: any;
+};
+
+const PullRequests = (props: TPullRequests) => {
   const theme = props.theme;
   return (
     <div>
@@ -16,7 +20,7 @@ const PullRequests = (props) => {
       </div>
       <div className="pull-request-body-div">
         {pullRequestsData["data"].map((pullRequest) => {
-          return <PullRequestCard pullRequest={pullRequest} />;
+          return <PullRequestCard key={pullRequest.id || pullRequest.title} pullRequest={pullRequest} />;
         })}
       </div>
     </div>
