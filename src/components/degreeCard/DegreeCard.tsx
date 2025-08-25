@@ -1,7 +1,24 @@
-import React, { Component } from "react";
+import React from "react";
 import { Fade, Flip } from "react-reveal";
 
-const DegreeCard = (props) => {
+type TDegreeCard = {
+  degree: {
+    id: number;
+    name: string;
+    logo_path: string;
+    alt_name: string;
+    year: number;
+    subtitle: string;
+    degree_type: number;
+    duration: string;
+    title: string;
+    descriptions: any;
+    website_link: any;
+
+  };
+  theme: any;
+}
+const DegreeCard = (props: TDegreeCard) => {
   const degree = props.degree;
   const theme = props.theme;
   return (
@@ -45,7 +62,7 @@ const DegreeCard = (props) => {
             </div>
           </div>
           <div className="body-content">
-            {degree.descriptions.map((sentence, index) => {
+            {degree.descriptions.map((sentence: any, index: number) => {
               return (
                 <p key={"degree" + index} className="content-list" style={{ color: theme.text }}>
                   {sentence}

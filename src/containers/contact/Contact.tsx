@@ -29,10 +29,11 @@ export default function Contact() {
           </div>
         </div>
         <div className="contact-image-div">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             alt="Saad Working"
             src={require("../../assets/images/contactMail.png")}
-          ></img>
+          />
         </div>
       </div>
     </div>

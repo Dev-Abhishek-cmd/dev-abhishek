@@ -1,12 +1,23 @@
 import React from "react";
 import { Fade } from "react-reveal";
+type TCertificationCard = {
+  certificate: {
+    logo_path: string;
+    alt_name: string;
+    title: string;
+    subtitle: string;
+    certificate_link: string;
+    color_code: string;
+  };
+  theme: any;
+};
 
-const CertificationCard = (props) => {
+const CertificationCard = (props: TCertificationCard) => {
   const certificate = props.certificate;
   const theme = props.theme;
   return (
     <Fade bottom duration={2000} distance="20px">
-      <div className="cert-card" key={props.key}>
+      <div className="cert-card" >
         <div className="content">
           <a
             href={certificate.certificate_link}

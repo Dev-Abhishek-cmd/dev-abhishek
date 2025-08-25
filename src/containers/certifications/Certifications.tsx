@@ -1,9 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import { Fade } from "react-reveal";
 import { certifications } from "../../portfolio";
 import CertificationCard from "../../components/certificationCard/CertificationCard";
 
-const Certifications = (props) => {
+type TCertifications = {
+  theme: any;
+}
+const Certifications = (props: TCertifications) => {
   const theme = props.theme;
   return (
     <div className="main" id="certs">
@@ -16,10 +19,12 @@ const Certifications = (props) => {
       </div>
       <div className="certs-body-div">
         {certifications.certifications.map((cert, index) => {
-          return <CertificationCard
-            key={"certificate" + index}
-            certificate={cert}
-            theme={theme} />;
+          return (
+            <CertificationCard
+              key={"certificate" + index}
+              certificate={cert}
+              theme={theme} />
+          );
         })}
       </div>
     </div>

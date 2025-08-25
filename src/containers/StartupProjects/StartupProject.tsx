@@ -15,13 +15,15 @@ export default function StartupProject() {
         <p className="subTitle project-subtitle">{bigProjects.subtitle}</p>
         <div className="startup-projects-main">
           <div className="startup-project-text">
-            {bigProjects.projects.map((project) => {
+            {bigProjects.projects.map((project, idx) => {
               return (
                 <div
                   className="saaya-health-div"
                   onClick={() => openProjectInNewWindow(project.link)}
+                  key={project.link || idx}
                 >
-                  <img alt="Saad Working" src={project.image}></img>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img alt="Saad Working" src={project.image} />
                 </div>
               );
             })}

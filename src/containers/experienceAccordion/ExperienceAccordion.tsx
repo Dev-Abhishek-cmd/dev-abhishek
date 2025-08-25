@@ -8,12 +8,12 @@ const ExperienceAccordion = (props) => {
   return (
     <div className="experience-accord">
       <Accordion>
-        {props.sections.map((section) => {
+        {props.sections.map((section, sIdx) => {
           return (
             <Panel
               className="accord-panel"
               title={section["title"]}
-              key={section["title"]}
+              key={section["title"] || sIdx}
               overrides={{
                 Header: {
                   style: () => ({
@@ -42,7 +42,9 @@ const ExperienceAccordion = (props) => {
                     index={index}
                     totalCards={section["experiences"].length}
                     experience={experience}
-                    theme={theme} />
+                    theme={theme}
+                    key={experience.title || index}
+                  />
                 );
               })}
             </Panel>

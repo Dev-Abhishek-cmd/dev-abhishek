@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Fade } from "react-reveal";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";

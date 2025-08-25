@@ -1,10 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import { Fade } from "react-reveal";
 import { Doughnut } from "react-chartjs-2";
 import IssueData from "../../shared/opensource/issues.json";
 
 const IssueChart = () => {
-
   const data = {
     labels: ["Open", "Closed"],
     datasets: [
