@@ -6,7 +6,7 @@ import Organizations from "@/src/containers/organizations/Organizations";
 import PullRequests from "@/src/containers/pullRequests/PullRequests";
 import Issues from "@/src/containers/issues/Issues";
 import TopButton from "@/src/components/topButton/TopButton";
-import { chosenTheme } from "../theme";
+import { chosenTheme } from "@/src/theme";
 
 const Opensource = () => {
   const theme = chosenTheme

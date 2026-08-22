@@ -6,7 +6,7 @@ import { Fade } from "react-reveal";
 import PullRequestData from "@/src/shared/opensource/pull_requests.json";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-class PullRequestChart extends Component {
+class PullRequestChart extends Component<any> {
   render() {
     const data = {
       labels: ["Open", "Merged", "Closed"],
@@ -31,8 +31,6 @@ class PullRequestChart extends Component {
         <Doughnut
           data={data}
           options={{
-            padding: "0",
-            margin: "0",
             responsive: true,
             maintainAspectRatio: true,
             animation: {

@@ -1,17 +1,18 @@
+import { chosenTheme } from "@/src/theme";
 import React, { Component } from "react";
 import Header from "../../../components/header/Header";
 import Footer from "../../../components/footer/Footer";
 import TopButton from "../../../components/topButton/TopButton";
 import { Fade } from "react-reveal";
-import "./Error.css";
-import { Link } from "react-router-dom";
 
-export default class Error extends Component {
+import Link from "next/link";
+
+export default class Error extends Component<any> {
   render() {
-    const theme = this.props.theme;
+    const theme = this.props.theme || chosenTheme;
     return (
       <div className="error-main">
-        <Header theme={this.props.theme} />
+        <Header theme={theme} />
         <div className="error-class">
           <Fade bottom duration={2000} distance="40px">
             <h1>Woops</h1>
@@ -19,7 +20,7 @@ export default class Error extends Component {
             <p>The requested page is unavailable at the moment!</p>
             <Link
               className="main-button"
-              to="/home"
+              href="/"
               style={{
                 color: theme.body,
                 backgroundColor: theme.text,
@@ -31,8 +32,8 @@ export default class Error extends Component {
             </Link>
           </Fade>
         </div>
-        <Footer theme={this.props.theme} />
-        <TopButton theme={this.props.theme} />
+        <Footer theme={theme} />
+        <TopButton theme={theme} />
       </div>
     );
   }

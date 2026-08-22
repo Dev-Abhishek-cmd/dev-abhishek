@@ -2,13 +2,14 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import "../../public/assets/css/globals.css";
 import "./index.css";
-import "./app.css";
+import "./App.css";
 import "./educations.css";
 import "./experience.css";
 import "./projects.css";
 import "./opensource.css";
 import "./contact.css";
 import "./splash.css";
+import "./errors/error404/Error.css";
 
 const HomeLayout = (props: any) => {
     const { Component, pageProps } = props

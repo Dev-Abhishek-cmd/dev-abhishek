@@ -19,7 +19,6 @@ const ProjectLanguages = (props) => {
               >
                 <li
                   className="software-skill-inline-languages"
-                  name={logo.skillName}
                 >
                   <span
                     className="iconify"

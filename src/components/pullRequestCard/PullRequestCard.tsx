@@ -42,7 +42,6 @@ const PullRequestCard = (props: TPullRequestCard) => {
       <OverlayTrigger
         key={name}
         placement={"top"}
-        style={{ marginBottom: "5px" }}
         overlay={
           <Tooltip id={`tooltip-top`}>
             <strong>{`Merged by ${name}`}</strong>
@@ -53,6 +52,7 @@ const PullRequestCard = (props: TPullRequestCard) => {
           href={pullRequest["mergedBy"]["url"]}
           target="_blank"
           rel="noopener noreferrer"
+          style={{ marginBottom: "5px" }}
         >
           <img
             className="merge-by-img"

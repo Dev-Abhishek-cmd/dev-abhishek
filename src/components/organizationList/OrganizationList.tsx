@@ -11,14 +11,13 @@ const OrganizationList = (props) => {
             <OverlayTrigger
               key={logo["login"]}
               placement={"top"}
-              style={{ marginBottom: "5px" }}
               overlay={
                 <Tooltip id={`tooltip-top`}>
                   <strong>{logo["login"]}</strong>
                 </Tooltip>
               }
             >
-              <li className="organizations-inline" name={logo["login"]}>
+              <li className="organizations-inline" style={{ marginBottom: "5px" }}>
                 <Fade bottom duration={2000} distance="40px">
                   <img
                     className="organizations-img"

@@ -1,27 +1,29 @@
 import React from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
-type TCompetitiveSites={
+type TCompetitiveSites = {
   logos: any;
-  siteName: string;
-}
-const CompetitiveSites = (props:TCompetitiveSites) => {
+  siteName?: string;
+};
+const CompetitiveSites = (props: TCompetitiveSites) => {
   return (
     <div className="competitive-sites-main-div">
       <ul className="dev-icons">
         {props.logos.map((logo: any, index: number) => {
           return (
             <OverlayTrigger
-              key={logo.siteName+index}
+              key={logo.siteName + index}
               placement={"top"}
-              style={{ marginBottom: "5px" }}
               overlay={
                 <Tooltip id={`tooltip-top`}>
                   <strong>{logo.siteName}</strong>
                 </Tooltip>
               }
             >
-              <li className="competitive-sites-inline" name={logo.siteName}>
+              <li
+                className="competitive-sites-inline"
+                style={{ marginBottom: "5px" }}
+              >
                 <a
                   href={logo.profileLink}
                   target="_blank"

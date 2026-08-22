@@ -1,59 +1,46 @@
 import React from "react";
-import { Accordion, Panel } from "baseui/accordion";
 import ExperienceCard from "@/src/components/experienceCard/ExperienceCard";
 
-const ExperienceAccordion = (props) => {
-
+const ExperienceAccordion = (props: any) => {
   const theme = props.theme;
+  const sections = props.sections || [];
+
   return (
-    <div className="experience-accord">
-      <Accordion>
-        {props.sections.map((section, sIdx) => {
-          return (
-            <Panel
-              className="accord-panel"
-              title={section["title"]}
-              key={section["title"] || sIdx}
-              overrides={{
-                Header: {
-                  style: () => ({
-                    backgroundColor: `${theme.body}`,
-                    border: `1px solid`,
-                    borderRadius: `5px`,
-                    borderColor: `${theme.headerColor}`,
-                    marginBottom: `3px`,
-                    fontFamily: "Google Sans Regular",
-                    color: `${theme.text}`,
-                    ":hover": {
-                      color: `${theme.secondaryText}`,
-                    },
-                  }),
-                },
-                Content: {
-                  style: () => ({
-                    backgroundColor: `${theme.body}`,
-                  }),
-                },
+    <div className="experience-accord" style={{ width: "90%", margin: "0 auto", paddingBottom: "50px" }}>
+      {sections.map((section: any, sIdx: number) => {
+        return (
+          <div key={section.title || sIdx} style={{ marginBottom: "50px" }}>
+            <h2
+              style={{
+                color: theme.text,
+                fontFamily: "Google Sans Bold, Montserrat, sans-serif",
+                fontSize: "28px",
+                marginBottom: "25px",
+                borderBottom: `2px solid ${theme.headerColor || "rgba(0,0,0,0.1)"}`,
+                paddingBottom: "12px",
               }}
             >
-              {section["experiences"].map((experience, index) => {
-                return (
-                  <ExperienceCard
-                    index={index}
-                    totalCards={section["experiences"].length}
-                    experience={experience}
-                    theme={theme}
-                    key={experience.title || index}
-                  />
-                );
-              })}
-            </Panel>
-          );
-        })}
-      </Accordion>
+              {section.title}
+            </h2>
+            <div>
+              {section.experiences &&
+                section.experiences.map((experience: any, index: number) => {
+                  return (
+                    <ExperienceCard
+                      index={index}
+                      totalCards={section.experiences.length}
+                      experience={experience}
+                      theme={theme}
+                      key={experience.title || index}
+                    />
+                  );
+                })}
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
-
-}
+};
 
 export default ExperienceAccordion;

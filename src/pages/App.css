@@ -59,7 +59,8 @@
       transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 }
-button/Button.css.main-button {
+/* button/Button.css */
+.main-button {
   background-color: #55198b;
   border: solid 1px #55198b;
   color: white;
@@ -402,21 +403,25 @@ button/Button.css.main-button {
 }
 
 .greeting-text {
-  margin-top: 80px;
-  font-size: 70px;
+  margin-top: 40px;
+  font-size: 56px;
   line-height: 1.1;
   font-family: "Google Sans Bold";
 }
 
 .greeting-nickname {
-  font-size: 30px;
-  line-height: 0px;
+  font-size: 26px;
+  line-height: 1.4;
+  margin-top: 10px;
+  margin-bottom: 15px;
   font-family: "Google Sans Bold Italic";
 }
 
 .greeting-text-p {
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 15px;
+  margin-bottom: 25px;
   margin-right: 40px;
   font-family: "Google Sans Medium";
 }

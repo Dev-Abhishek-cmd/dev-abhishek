@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Fade } from "react-reveal";
 
-class IssueCard extends Component {
+class IssueCard extends Component<any> {
   render() {
     const issue = this.props.issue;
     var iconPR;
@@ -30,7 +30,6 @@ class IssueCard extends Component {
         <OverlayTrigger
           key={name}
           placement={"top"}
-          style={{ marginBottom: "5px" }}
           overlay={
             <Tooltip id={`tooltip-top`}>
               <strong>{`Assigned to ${name}`}</strong>
@@ -41,6 +40,7 @@ class IssueCard extends Component {
             href={issue["assignees"]["nodes"][0]["url"]}
             target="_blank"
             rel="noopener noreferrer"
+            style={{ marginBottom: "5px" }}
           >
             <img
               className="assigned-to-img"
