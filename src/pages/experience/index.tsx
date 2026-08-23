@@ -1,7 +1,7 @@
 import React from "react";
 import { Fade } from "react-reveal";
 import ExperienceImg from "./ExperienceImg";
-import { chosenTheme } from "../theme";
+import { chosenTheme } from "@/src/theme";
 import Footer from "@/src/components/footer/Footer";
 import { experience } from "@/src/portfolio";
 import Header from "@/src/components/header/Header";

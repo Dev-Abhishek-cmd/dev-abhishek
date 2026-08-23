@@ -6,7 +6,7 @@ import {
   publicationsHeader,
   publications,
 } from "@/src/portfolio";
-import { chosenTheme } from "../theme";
+import { chosenTheme } from "@/src/theme";
 import Header from "@/src/components/header/Header";
 import ProjectsImg from "./ProjectsImg";
 import ProjectsData from "@/src/shared/opensource/projects.json";

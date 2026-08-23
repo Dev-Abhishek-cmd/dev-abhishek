@@ -9,7 +9,7 @@ import CompetitiveSites from "../../components/competitiveSites/CompetitiveSites
 import EducationImg from "./EducationImg";
 import { competitiveSites } from "../../portfolio";
 import { certifications } from "../../portfolio";
-import { chosenTheme } from "../theme";
+import { chosenTheme } from "@/src/theme";
 
 const Education = () => {
 

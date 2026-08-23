@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class DataScienceImg extends Component {
+export default class DataScienceImg extends Component<any> {
   render() {
     const theme = this.props.theme;
     return (

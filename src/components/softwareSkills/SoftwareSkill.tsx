@@ -1,7 +1,7 @@
 import React from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
-class SoftwareSkill extends React.Component {
+class SoftwareSkill extends React.Component<any> {
   render() {
     return (
       <div>
@@ -14,7 +14,7 @@ class SoftwareSkill extends React.Component {
               </li>
             );
           })} */}
-            {this.props.logos.map((logo) => {
+            {this.props.logos.map((logo: any) => {
               return (
                 <OverlayTrigger
                   key={logo.skillName}
@@ -25,7 +25,7 @@ class SoftwareSkill extends React.Component {
                     </Tooltip>
                   }
                 >
-                  <li className="software-skill-inline" name={logo.skillName}>
+                  <li className="software-skill-inline">
                     {logo.fontAwesomeClassname && (
                       <span
                         className="iconify"

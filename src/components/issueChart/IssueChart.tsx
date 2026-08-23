@@ -1,7 +1,10 @@
 import React from "react";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Fade } from "react-reveal";
 import { Doughnut } from "react-chartjs-2";
 import IssueData from "../../shared/opensource/issues.json";
+
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 const IssueChart = () => {
   const data = {
@@ -23,8 +26,6 @@ const IssueChart = () => {
       <Doughnut
         data={data}
         options={{
-          margin: "0",
-          padding: "0",
           responsive: true,
           maintainAspectRatio: true,
           animation: {

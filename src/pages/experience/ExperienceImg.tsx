@@ -1,8 +1,9 @@
+import { chosenTheme } from "@/src/theme";
 import React, { Component } from "react";
 
-export default class ExperienceImg extends Component {
+export default class ExperienceImg extends Component<any> {
   render() {
-    const theme = this.props.theme;
+    const theme = this.props.theme || chosenTheme;
     return (
       <svg
         id="bf56719a-dd30-4b09-833f-7c41eeee086b"

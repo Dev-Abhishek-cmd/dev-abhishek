@@ -5,20 +5,20 @@ import Link from "next/link";
 
 interface IconWrapperProps {
   backgroundColor: string;
-  theme: DefaultTheme;
+  theme?: any;
 }
 const IconWrapper = styled.span<IconWrapperProps>`
   i {
     background-color: ${(props) => props.backgroundColor};
   }
   &:hover i {
-    background-color: ${({ theme }) => theme.text};
+    background-color: ${({ theme }) => (theme ? theme.text : "inherit")};
     transition: 0.3s ease-in;
   }
 `;
 
 interface SocialMediaProps {
-  theme: DefaultTheme;
+  theme?: any;
 }
 const socialMedia = (props: SocialMediaProps) => {
   return (

@@ -3,21 +3,20 @@ import { Fade, Flip } from "react-reveal";
 
 type TDegreeCard = {
   degree: {
-    id: number;
-    name: string;
-    logo_path: string;
-    alt_name: string;
-    year: number;
-    subtitle: string;
-    degree_type: number;
-    duration: string;
-    title: string;
-    descriptions: any;
-    website_link: any;
-
+    id?: number;
+    name?: string;
+    logo_path?: string;
+    alt_name?: string;
+    year?: number;
+    subtitle?: string;
+    degree_type?: number;
+    duration?: string;
+    title?: string;
+    descriptions?: any;
+    website_link?: any;
   };
   theme: any;
-}
+};
 const DegreeCard = (props: TDegreeCard) => {
   const degree = props.degree;
   const theme = props.theme;

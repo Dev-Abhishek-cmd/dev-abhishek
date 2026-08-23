@@ -145,7 +145,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-12">About Me</h2>
           <p className="text-lg leading-relaxed">
-            I am an experienced IT professional with over 8 years of expertise in Fullstack Development Technologies. My skills span across a wide range of technologies including React Native, ReactJS, Electron js, Next js, Apollo-server-graphql, PostgreSQL, MySQL, Amazon Services, and Mobile Application Development Technologies. I also have a strong background in DevOps practices, including CI/CD and Docker implementation. With my in-depth knowledge and hands-on experience, I am adept at delivering high-quality solutions and meeting project requirements. I thrive in challenging environments and continuously stay updated with the latest industry trends and best practices.
+            I am an experienced IT professional with over 10+ years of expertise in Fullstack Development Technologies. My skills span across a wide range of technologies including React Native, ReactJS, Electron js, Next js, Apollo-server-graphql, PostgreSQL, MySQL, Amazon Services, and Mobile Application Development Technologies. I also have a strong background in DevOps practices, including CI/CD and Docker implementation. With my in-depth knowledge and hands-on experience, I am adept at delivering high-quality solutions and meeting project requirements. I thrive in challenging environments and continuously stay updated with the latest industry trends and best practices.
           </p>
         </div>
       </section>

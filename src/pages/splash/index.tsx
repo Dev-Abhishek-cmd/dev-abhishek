@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import LoaderLogo from "../../components/Loader/LoaderLogo";
-import { chosenTheme } from "../theme";
+import { chosenTheme } from "@/src/theme";
 import { useRouter } from "next/router";
 
 function AnimatedSplash(props) {

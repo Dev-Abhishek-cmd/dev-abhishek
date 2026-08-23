@@ -17,7 +17,7 @@ function GetSkillSvg(props) {
   return <DesignImg theme={props.theme} />;
 }
 
-class SkillSection extends Component {
+class SkillSection extends Component<any> {
   render() {
     const theme = this.props.theme;
     return (
@@ -28,7 +28,7 @@ class SkillSection extends Component {
               <Fade left duration={2000}>
                 <div className="skills-image-div">
                   {/* <img
-                    alt="Ashutosh is Analysing Data"
+                    alt="Abhishek is Analysing Data"
                     src={require(`../../assets/images/${skill.imagePath}`)}
                   ></img> */}
                   <GetSkillSvg fileName={skill.fileName} theme={theme} />

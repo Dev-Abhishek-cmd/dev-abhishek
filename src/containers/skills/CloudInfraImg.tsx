@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class CloudInfraImg extends Component {
+export default class CloudInfraImg extends Component<any> {
   render() {
     const theme = this.props.theme;
     return (
